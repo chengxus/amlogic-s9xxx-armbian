@@ -132,7 +132,7 @@ if [[ "${FDTFILE}" =~ ^(rk3588-smart-am60\.dtb|rk3588s-orangepi-5b\.dtb)$ ]]; th
 fi
 
 # For nsy-g16-plus/nsy-g68-plus/bdy-g18-pro board
-if [[ "${FDTFILE}" =~ ^(rk3568-nsy-g16-plus\.dtb|rk3568-nsy-g68-plus\.dtb|rk3568-bdy-g18-pro\.dtb)$ ]]; then
+if [[ "${FDTFILE}" =~ ^(rk3568-nsy-g16-plus\.dtb|rk3568-nsy-g68-plus\.dtb|rk3568-bdy-g18-pro\.dtb|rk3568-bdy-g16-pro\.dtb)$ ]]; then
     (
         # Wait for network to be up
         sleep 10
