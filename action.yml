@@ -317,6 +317,7 @@ runs:
             [[ -n "${{ inputs.docker_hostpath }}"  ]] && make_args+=(-h "${{ inputs.docker_hostpath }}")
             [[ -n "${{ inputs.docker_image }}"     ]] && make_args+=(-i "${{ inputs.docker_image }}")
             [[ -n "${kernel_sign}"                 ]] && make_args+=(-n "${kernel_sign}")
+            echo -e "Args: ${make_args[@]}"
             sudo ./recompile "${make_args[@]}"
 
             cd ${{ inputs.docker_hostpath || github.action_path }}
