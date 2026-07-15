@@ -179,7 +179,7 @@ get_textoffset() {
 
 init_var() {
     echo -e "${STEPS} Initializing variables..."
-
+    echo -e ""args: ${@} "
     # If it is followed by [ : ], it means that the option requires a parameter value
     local options="b:r:u:k:a:t:s:n:"
     parsed_args=$(getopt -o "${options}" -- "${@}")
