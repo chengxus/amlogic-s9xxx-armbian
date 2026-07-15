@@ -223,6 +223,7 @@ runs:
             [[ -n "${{ inputs.armbian_fstype }}"  ]] && make_args+=(-t "${{ inputs.armbian_fstype }}")
             [[ -n "${{ inputs.armbian_size }}"    ]] && make_args+=(-s "${{ inputs.armbian_size }}")
             [[ -n "${builder_name}"               ]] && make_args+=(-n "${builder_name}")
+            echo -e "Args: ${make_args[@]}"
             sudo ./rebuild "${make_args[@]}"
 
             cd ${{ github.action_path }}/${armbian_filepath}
