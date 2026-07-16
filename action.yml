@@ -132,6 +132,7 @@ runs:
 
             cd ${{ github.action_path }}
             echo -e "Starting Armbian rebuild..."
+            md5sum ./rebuild
 
             armbian_file="${{ inputs.armbian_path }}"
             armbian_filename="${armbian_file##*/}"
